@@ -1,0 +1,60 @@
+%% define parameter
+
+A = [0 1; 20.6 0]
+
+B = [0; 1]
+
+C = [0 1]
+
+%% step 1
+
+syms s
+
+I = eye(length(A))
+
+SI_minus_A = (s*I)-A
+
+det_SI_minus_A = det(SI_minus_A)
+
+a = [0; -20.6] % from det_SI_minus_A
+
+%% step 3
+
+N = [C' (A'*C')]
+
+%% step 4
+
+W = [1 0;0 1]
+
+NW = N*W
+
+inv_trans_NW = inv(NW')
+
+%% step 5
+
+syms s
+
+% Given equation
+eq = (s + 1.8 + 2.4i)*(s + 1.8 - 2.4i)
+
+ex = expand(eq)
+
+a_bar = [3.6; 9] % from ex
+
+%% step 6
+
+K = inv_trans_NW*(a_bar-a)
+
+%% state x hat step 1.2
+
+A_hat = [A-(K*C)]
+
+%% step 2.2
+
+
+
+
+
+
+
+

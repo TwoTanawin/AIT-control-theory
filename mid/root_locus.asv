@@ -1,0 +1,18 @@
+% Use close loop tranfer function
+numerator = [k];
+denominator = [78.4 19.6 k];
+
+% Plot the root locus
+rlocus(numerator, denominator)
+
+% Customize the plot (optional)
+title('Root Locus Plot')
+xlabel('Real Axis')
+ylabel('Imaginary Axis')
+grid on
+
+% Define the range of k values for the plot
+k_values = 0:0.1:10;  % Adjust the range as needed
+
+% Calculate and plot the root locus for different k values
+rlocus(numerator, denominator, k_values)

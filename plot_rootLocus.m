@@ -5,7 +5,7 @@ CHE = tf(ps,qs) % Caracteristic Eqn
 
  rlocus(CHE)
 
-[k, p] = rlocfind(ps,qs)
+% [k, p] = rlocfind(ps,qs)
 
 % k = [0 1 3 5 7]
 % 
