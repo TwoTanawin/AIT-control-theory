@@ -25,7 +25,7 @@ syms m1
 
 R = [1]
 
-Q = C'*C
+Q = (C'*C)*4
 
 G = inv(R)*B'*m1
 
@@ -72,6 +72,8 @@ At = A'
 GB = G_value*B
 
 M2 = -(MA + M2A0 + ((At - GB)*m2))
+
+pretty(M2)
 
 solution2 = solve(M2,m2)
 
